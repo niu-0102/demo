@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>淘</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="https://www.swiper.com.cn/package/swiper-bundle.min.css">
 </head>
@@ -20,10 +21,10 @@
                     </div>
                 </li>
                 <li class="head_ul_li">
-                    <div class="head_ul_li_hd">
+                    <div class="head_ul_li_hd login">
                         <a href="login.html" class="h">亲，请登录</a>
                     </div>
-                    <div class="head_ul_li_hd">
+                    <div class="head_ul_li_hd zhu">
                         <a href="register.html">免费注册</a>
                     </div>
                 </li>
@@ -54,7 +55,7 @@
                 <li class="head_ul_li">
                     <div class="head_ul_li_hd">
                         <span>
-                        <a href="">购物车</a>
+                        <a href="cart.html">购物车</a>
                     </span>
                         <span>
                         v
@@ -624,8 +625,8 @@
                 </div>
                 <div class="ft">
                     <div class="link">
-                        <a href="">登录</a>
-                        <a href="">注册</a>
+                        <a href="login.html" class="user lo">登录</a>
+                        <a href="register.html" class="zhu">注册</a>
                         <a href="">开店</a>
                     </div>
                 </div>
@@ -668,6 +669,394 @@
             </ul>
         </div>
     </div>
+    <div id="floorNav">
+        <ul class="floor_ul">
+            <li class="on li_1">品质<br> 好货
+            </li>
+            <li class="li_2">好店<br> 直播
+            </li>
+            <li class="li_3">实惠<br> 热卖
+            </li>
+            <li class="li_4">猜你<br> 喜欢
+            </li>
+            <li class="Top">顶部</li>
+            <li><a href="">反馈</a></li>
+            <li><a href="">暴恐<br>
+                举报</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <ul class="content_ul">
+            <li class="li_1">
+                <h3>
+                    <!-- <em>有好货</em> -->
+                    <img src="//img.alicdn.com/tfs/TB1tqpnegMPMeJjy1XcXXXpppXa-148-48.png" alt="" class="fl">
+                    <p><span>与品质生活不期而遇</span></p>
+                </h3>
+                <div class="li_1_div">
+                </div>
+
+                <div class="content_pic">
+                    <div>
+                        <a href=""><img src="https://img.alicdn.com/simba/img/TB1XlOHeekJL1JjSZFmSuww0XXa.jpg" alt=""></a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="ul_li_2">
+                <div class="li_2">
+                    <div class="li_2_left fl">
+                        <h3>
+                            <!-- <em>每日好店</em> -->
+                            <img src="//img.alicdn.com/tfs/TB1_EXwb3oQMeJjy0FpXXcTxpXa-162-48.png" alt="" class="fl">
+                            <p>
+                                <span>发现深藏的好店</span>
+                            </p>
+                        </h3>
+                        <ul class="li_2_ul">
+                            <li class="fl">
+                                <a href="">
+                                    <h4>
+                                        <span>万能市集</span>
+                                    </h4>
+                                    <div class="tu">
+                                        <div class="fl img_wrap">
+                                            <img src="//img.alicdn.com/bao/uploaded/i4/50079713/O1CN011QQXyt2LcbY1Tz3RW_!!50079713.jpg_180x180q90.jpg_.webp" alt="">
+                                        </div>
+                                        <div class="right">
+                                            <img src="//img.alicdn.com/bao/uploaded/i4/50079713/O1CN01989rpQ2LcbXx2jAzZ_!!50079713.jpg_100x100q90.jpg_.webp" alt="">
+                                            <img src="//img.alicdn.com/bao/uploaded/i1/50079713/O1CN01T21wa52LcbXoL1MHT_!!50079713.jpg_100x100q90.jpg_.webp" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="">
+                                    <h4>
+                                        <span>淘宝江湖</span>
+                                    </h4>
+                                    <div class="tu">
+                                        <div class="fl img_wrap">
+                                            <img src="//img.alicdn.com/bao/uploaded/i1/47967555/TB2AGgQaEyfF1Jjy0FbXXXSupXa_!!47967555.jpg_180x180q90.jpg_.webp" alt="">
+                                        </div>
+                                        <div class="right">
+                                            <img src="//img.alicdn.com/bao/uploaded/i1/47967555/TB2AGgQaEyfF1Jjy0FbXXXSupXa_!!47967555.jpg_100x100q90.jpg_.webp" alt="">
+                                            <img src="//img.alicdn.com/bao/uploaded/i1/47967555/TB1mohOcruWBuNjSszgYXH8jVXa_M2.SS2_100x100q90.jpg_.webp" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="">
+                                    <h4>
+                                        <span>深藏不露</span>
+                                    </h4>
+                                    <div class="tu">
+                                        <div class="fl img_wrap">
+                                            <img src="//img.alicdn.com/bao/uploaded/i3/634491/O1CN01jTR7iT1j2vL4xJnAS_!!634491.jpg_180x180q90.jpg_.webp" alt="">
+                                        </div>
+                                        <div class="right">
+                                            <img src="//img.alicdn.com/bao/uploaded/i4/634491/O1CN01uNIl3n1j2vHjbFf5i_!!634491.jpg_100x100q90.jpg_.webp" alt="">
+                                            <img src="//img.alicdn.com/bao/uploaded/i4/634491/O1CN01dQOEZN1j2vGy4sfV1_!!634491.jpg_100x100q90.jpg_.webp" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="">
+                                    <h4>
+                                        <span>淘宝江湖</span>
+                                    </h4>
+                                    <div class="tu">
+                                        <div class="fl img_wrap">
+                                            <img src="//img.alicdn.com/bao/uploaded/i1/47967555/TB2AGgQaEyfF1Jjy0FbXXXSupXa_!!47967555.jpg_180x180q90.jpg_.webp" alt="">
+                                        </div>
+                                        <div class="right">
+                                            <img src="//img.alicdn.com/bao/uploaded/i1/47967555/TB2AGgQaEyfF1Jjy0FbXXXSupXa_!!47967555.jpg_100x100q90.jpg_.webp" alt="">
+                                            <img src="//img.alicdn.com/bao/uploaded/i1/47967555/TB1mohOcruWBuNjSszgYXH8jVXa_M2.SS2_100x100q90.jpg_.webp" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="li_2_right fl">
+                        <h3>
+                            <!-- <em>每日好店</em> -->
+                            <img src="//img.alicdn.com/tfs/TB1cmpCb3MPMeJjy1XdXXasrXXa-204-42.png" alt="" class="fl">
+                            <p>
+                                <span>你的爱豆直播等你哟！</span>
+                            </p>
+                        </h3>
+                        <ul class="li_2_ul">
+                            <li class="fl">
+                                <a href="">
+                                    <h4>
+                                        <span>万能市集</span>
+                                    </h4>
+                                    <div class="tu">
+                                        <div class="fl img_wrap">
+                                            <img src="//img.alicdn.com/bao/uploaded/i4/50079713/O1CN011QQXyt2LcbY1Tz3RW_!!50079713.jpg_180x180q90.jpg_.webp" alt="">
+                                        </div>
+                                        <div class="right">
+                                            <img src="//img.alicdn.com/bao/uploaded/i4/50079713/O1CN01989rpQ2LcbXx2jAzZ_!!50079713.jpg_100x100q90.jpg_.webp" alt="">
+                                            <img src="//img.alicdn.com/bao/uploaded/i1/50079713/O1CN01T21wa52LcbXoL1MHT_!!50079713.jpg_100x100q90.jpg_.webp" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="">
+                                    <h4>
+                                        <span>淘宝江湖</span>
+                                    </h4>
+                                    <div class="tu">
+                                        <div class="fl img_wrap">
+                                            <img src="//img.alicdn.com/bao/uploaded/i1/47967555/TB2AGgQaEyfF1Jjy0FbXXXSupXa_!!47967555.jpg_180x180q90.jpg_.webp" alt="">
+                                        </div>
+                                        <div class="right">
+                                            <img src="//img.alicdn.com/bao/uploaded/i1/47967555/TB2AGgQaEyfF1Jjy0FbXXXSupXa_!!47967555.jpg_100x100q90.jpg_.webp" alt="">
+                                            <img src="//img.alicdn.com/bao/uploaded/i1/47967555/TB1mohOcruWBuNjSszgYXH8jVXa_M2.SS2_100x100q90.jpg_.webp" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="">
+                                    <h4>
+                                        <span>深藏不露</span>
+                                    </h4>
+                                    <div class="tu">
+                                        <div class="fl img_wrap">
+                                            <img src="//img.alicdn.com/bao/uploaded/i3/634491/O1CN01jTR7iT1j2vL4xJnAS_!!634491.jpg_180x180q90.jpg_.webp" alt="">
+                                        </div>
+                                        <div class="right">
+                                            <img src="//img.alicdn.com/bao/uploaded/i4/634491/O1CN01uNIl3n1j2vHjbFf5i_!!634491.jpg_100x100q90.jpg_.webp" alt="">
+                                            <img src="//img.alicdn.com/bao/uploaded/i4/634491/O1CN01dQOEZN1j2vGy4sfV1_!!634491.jpg_100x100q90.jpg_.webp" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="">
+                                    <h4>
+                                        <span>淘宝江湖</span>
+                                    </h4>
+                                    <div class="tu">
+                                        <div class="fl img_wrap">
+                                            <img src="//img.alicdn.com/bao/uploaded/i1/47967555/TB2AGgQaEyfF1Jjy0FbXXXSupXa_!!47967555.jpg_180x180q90.jpg_.webp" alt="">
+                                        </div>
+                                        <div class="right">
+                                            <img src="//img.alicdn.com/bao/uploaded/i1/47967555/TB2AGgQaEyfF1Jjy0FbXXXSupXa_!!47967555.jpg_100x100q90.jpg_.webp" alt="">
+                                            <img src="//img.alicdn.com/bao/uploaded/i1/47967555/TB1mohOcruWBuNjSszgYXH8jVXa_M2.SS2_100x100q90.jpg_.webp" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="li_2_2">
+                    <div class="li_2_2_left">
+                        <h3>
+                            <em>特色好物</em>
+                        </h3>
+                        <div class="box">
+                            <div class="paimai">
+                                <p>
+                                    <a href="">拍卖</a>
+                                </p>
+                                <span>一元起拍捡漏</span>
+                                <a href=""><img src="//img.alicdn.com/bao/uploaded/i1/O1CN01UIZL5G25dwtksOmab_!!0-paimai.jpg_120x120q90.jpg_.webp" alt="" class="fl"></a>
+
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="paimai">
+                                <p>
+                                    <a href="">拍卖</a>
+                                </p>
+                                <span>一元起拍捡漏</span>
+                                <a href=""><img src="//img.alicdn.com/bao/uploaded/i1/O1CN01UIZL5G25dwtksOmab_!!0-paimai.jpg_120x120q90.jpg_.webp" alt="" class="fl"></a>
+
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="paimai">
+                                <p>
+                                    <a href="">拍卖</a>
+                                </p>
+                                <span>一元起拍捡漏</span>
+                                <a href=""><img src="//img.alicdn.com/bao/uploaded/i1/O1CN01UIZL5G25dwtksOmab_!!0-paimai.jpg_120x120q90.jpg_.webp" alt="" class="fl"></a>
+
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="paimai">
+                                <p>
+                                    <a href="">拍卖</a>
+                                </p>
+                                <span>一元起拍捡漏</span>
+                                <a href=""><img src="//img.alicdn.com/bao/uploaded/i1/O1CN01UIZL5G25dwtksOmab_!!0-paimai.jpg_120x120q90.jpg_.webp" alt="" class="fl"></a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="li_2_2_right">
+                        <a href=""><img src="https://aecpm.alicdn.com/simba/img/TB17IgbKpXXXXcvXXXXSutbFXXX.jpg" alt=""></a>
+                    </div>
+                </div>
+            </li>
+            <li class="li_3">
+                <div class="li_3_1">
+                    <h3>热卖单品</h3>
+                    <div class="list">
+                        <div class="link">
+                            <a href="">女包包</a>
+                            <a href="">女外套</a>
+                            <a href="">项链女</a>
+                            <a href="">手表</a>
+                            <a href="">杯子</a>
+                            <a href="">冰箱</a>
+                            <a href="">洗发水</a>
+                            <a href="">连衣裙</a>
+                            <a href="">粉底</a>
+                            <a href="">面膜</a>
+                            <a href="">手机</a>
+                            <a href="">笔记本</a>
+                            <a href="">女套装</a>
+                            <a href="">卫衣男</a>
+                            <a href="">华为手机</a>
+                            <a href="">防晒霜</a>
+                            <a href="">沐浴露</a>
+                            <a href="">充电宝</a>
+                            <a href="">阿玛尼</a>
+                            <a href="">外套</a>
+                            <a href="">电视</a>
+                            <a href="">睡衣</a>
+                            <a href="">床</a>
+                            <a href="">笔袋</a>
+                            <img src="https://img.alicdn.com/tfs/TB13L7fbMoQMeJjy0FnXXb8gFXa-64-30.png" alt="" class="ad">
+                        </div>
+                    </div>
+                    <ul class="li_ul">
+                        <li>
+                            <a href=""><img src="https://gtms03.alicdn.com/tps/i3/TB1rVYNKXXXXXaKXVXXvBLt6FXX-230-230.png_.webp" alt=""></a>
+                            <div class="mom">
+                                <a href="">
+                                    <span class="first">￥89</span>
+                                    <span class="last">月销3595笔</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><img src="https://gtms03.alicdn.com/tps/i3/TB1rVYNKXXXXXaKXVXXvBLt6FXX-230-230.png_.webp" alt=""></a>
+                            <div class="mom">
+                                <a href="">
+                                    <span class="first">￥89</span>
+                                    <span class="last">月销3595笔</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><img src="https://gtms03.alicdn.com/tps/i3/TB1rVYNKXXXXXaKXVXXvBLt6FXX-230-230.png_.webp" alt=""></a>
+                            <div class="mom">
+                                <a href="">
+                                    <span class="first">￥89</span>
+                                    <span class="last">月销3595笔</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><img src="https://gtms03.alicdn.com/tps/i3/TB1rVYNKXXXXXaKXVXXvBLt6FXX-230-230.png_.webp" alt=""></a>
+                            <div class="mom">
+                                <a href="">
+                                    <span class="first">￥89</span>
+                                    <span class="last">月销3595笔</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><img src="https://gtms03.alicdn.com/tps/i3/TB1rVYNKXXXXXaKXVXXvBLt6FXX-230-230.png_.webp" alt=""></a>
+                            <div class="mom">
+                                <a href="">
+                                    <span class="first">￥89</span>
+                                    <span class="last">月销3595笔</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><img src="https://gtms03.alicdn.com/tps/i3/TB1rVYNKXXXXXaKXVXXvBLt6FXX-230-230.png_.webp" alt=""></a>
+                            <div class="mom">
+                                <a href="">
+                                    <span class="first">￥89</span>
+                                    <span class="last">月销3595笔</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><img src="https://gtms03.alicdn.com/tps/i3/TB1rVYNKXXXXXaKXVXXvBLt6FXX-230-230.png_.webp" alt=""></a>
+                            <div class="mom">
+                                <a href="">
+                                    <span class="first">￥89</span>
+                                    <span class="last">月销3595笔</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><img src="https://gtms03.alicdn.com/tps/i3/TB1rVYNKXXXXXaKXVXXvBLt6FXX-230-230.png_.webp" alt=""></a>
+                            <div class="mom">
+                                <a href="">
+                                    <span class="first">￥89</span>
+                                    <span class="last">月销3595笔</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><img src="https://gtms03.alicdn.com/tps/i3/TB1rVYNKXXXXXaKXVXXvBLt6FXX-230-230.png_.webp" alt=""></a>
+                            <div class="mom">
+                                <a href="">
+                                    <span class="first">￥89</span>
+                                    <span class="last">月销3595笔</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><img src="https://gtms03.alicdn.com/tps/i3/TB1rVYNKXXXXXaKXVXXvBLt6FXX-230-230.png_.webp" alt=""></a>
+                            <div class="mom">
+                                <a href="">
+                                    <span class="first">￥89</span>
+                                    <span class="last">月销3595笔</span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="li_ul_2">
+                        <li>
+                            <a href=""><img src="https://gtms01.alicdn.com/tps/i1/TB12EhzIXXXXXbMXpXXDgwcQVXX-375-130.jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="https://gtms02.alicdn.com/tps/i2/TB1ZeJGIXXXXXcnXXXXDgwcQVXX-375-130.jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="https://gtms03.alicdn.com/tps/i3/TB197VzIXXXXXbJXpXXDgwcQVXX-375-130.jpg" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="li_4">
+                <h3>
+                    猜你喜欢
+                </h3>
+                <div class="shop">
+
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
 
 
 

@@ -4,11 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Document</title>
 </head>
 
 <body>
+    <form action="">
+        <input type="text" placeholder="请输入账号">
+        <input type="password" placeholder="请设置密码">
+        <button type="button">立即注册</button>
+    </form>
+    <script src="../js/jquery-1.11.0.js"></script>
+    <script>
+        $("button").click(function() {
+            var name = $(":text").val()
+            var pass = $(":password").val()
+            axios.get("http://localhost:3000/user", {
+                params: {
+                    username: name
+                }
+            }).then(cha => {
+                if (cha.data.length == 0) {
+                    axios.post("http://localhost:3000/user", {
+                        username: name,
+                        password: pass
+                    }).then(arr => {
+                        alert("注册成功，将为您自动跳转至登陆页面")
+                        window.location.href = "login.html"
+                    })
 
+                } else {
+                    alert("用户名已存在")
+                }
+            })
+        })
+    </script>
 </body>
 
 </html>

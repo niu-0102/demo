@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/jquery-1.11.0.js"></script>
+    <title>Document</title>
+    <style>
+        #detail {
+            width: 400px;
+            height: 400px;
+        }
+        
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <em class="cun"></em>
+    <div id="detail">
+
+    </div>
+    <script>
+        var user = JSON.parse(localStorage.getItem("username"));
+        let Id = location.search.split("=")[1];
+        $(".cun").html(Id)
+        var a = ""
+        axios.get("http://localhost:3000/protucts", {
+            params: {
+                id: Id
+            }
+        }).then(aaa => {
+            a = aaa.data.length
+            if (a != 0) {
+                axios.get("http://localhost:3000/protucts", {
+                    params: {
+                        id: Id
+                    }
+                }).then(aaa => {
+                    let oDetail = document.getElementById("detail");
+                    oDetail.innerHTML = `
+            <img src="${aaa.data[0].imgUrl}">
+            <p>${aaa.data[0].title}</p>
+            <p>${aaa.data[0].people}</p>
+            <span>-</span><input type="text" value="1"><span>+</span>
+            <input type="button" value="加入购物车" id="addBtn">
+        `;
+                    $("span").eq(0).click(function() {
+                        let num = $("input").eq(0).val();
+                        num--;
+                        if (num < 1) {
+                            num = 1;
+                        }
+                        $("input").eq(0).val(num);
+                    })
+                    $("span").eq(1).click(function() {
+                        let num = $("input").eq(0).val();
+                        num++;
+                        $("input").eq(0).val(num);
+                    })
+                    $("input").eq(0).change(function() {
+                        let num = $("input").eq(0).val();
+                        if (num < 1) {
+                            num = 1;
+                        }
+                        $("input").eq(0).val(num);
+                    })
+                    if (user) {
+                        $("#addBtn").click(function() {
+                            axios.get("http://localhost:3000/carts", {
+                                params: {
+                                    username: user,
+                                    id: Id
+                                }
+                            }).then(add => {
+                                if (add.data.length == 0) {
+                                    axios.post("http://localhost:3000/carts", {
+                                        username: user,
+                                        id: Id,
+                                        title: $("p:first").text(),
+                                        price: $("p:last").text(),
+                                        imgUrl: $("img").attr("src"),
+                                        shu: $(":text").val()
+                                    })
+                                } else {
+                                    axios.get("http://localhost:3000/carts", {
+                                        username: user,
+                                        id: Id
+                                    }).then(gai => {
+                                        let num = Math.floor(gai.data[0].shu);
+                                        num += Math.floor($(":text").val())
+                                        axios.patch(`http://localhost:3000/carts/${Id}`, {
+                                            shu: num
+                                        })
+                                    })
+
+                                }
+                            })
+                        })
+                    }
+                })
+            } else {
+                axios.get("http://localhost:3000/productlist", {
+                    params: {
+                        id: Id
+                    }
+                }).then(bbb => {
+                    let oDetail = document.getElementById("detail");
+                    oDetail.innerHTML = `
+            <img src="${bbb.data[0].imgUrl}">
+            <p>${bbb.data[0].title}</p>
+            <p>${bbb.data[0].price}</p>
+            <span>-</span><input type="text" value="1"><span>+</span>
+            <input type="button" value="加入购物车" id="addBtn">
+        `;
+                    $("span").eq(0).click(function() {
+                        let num = $("input").eq(0).val();
+                        num--;
+                        if (num < 1) {
+                            num = 1;
+                        }
+                        $("input").eq(0).val(num);
+                    })
+                    $("span").eq(1).click(function() {
+                        let num = $("input").eq(0).val();
+                        num++;
+                        $("input").eq(0).val(num);
+                    })
+                    $("input").eq(0).change(function() {
+                        let num = $("input").eq(0).val();
+                        if (num < 1) {
+                            num = 1;
+                        }
+                        $("input").eq(0).val(num);
+                    })
+                    if (user) {
+                        $("#addBtn").click(function() {
+                            axios.get("http://localhost:3000/carts", {
+                                params: {
+                                    username: user,
+                                    id: Id
+                                }
+                            }).then(add => {
+                                if (add.data.length == 0) {
+                                    axios.post("http://localhost:3000/carts", {
+                                        username: user,
+                                        id: Id,
+                                        title: $("p:first").text(),
+                                        price: $("p:last").text(),
+                                        imgUrl: $("img").attr("src"),
+                                        shu: $(":text").val()
+                                    })
+                                } else {
+                                    axios.get("http://localhost:3000/carts", {
+                                        params: {
+                                            username: user,
+                                            id: Id
+                                        }
+                                    }).then(gai => {
+                                        let num = Math.floor(gai.data[0].shu);
+                                        num += Math.floor($(":text").val())
+                                        axios.patch(`http://localhost:3000/carts/${Id}`, {
+                                            shu: num
+                                        })
+                                    })
+
+                                }
+                            })
+                        })
+                    }
+                })
+            }
+        })
+    </script>
+
+</body>
+
+</html>
