@@ -33,7 +33,6 @@ axios.get("http://localhost:3000/protucts", {}).then(res => {
 })
 var like = ""
 axios.get("http://localhost:3000/productlist", {}).then(data => {
-    console.log(data.data[0]);
 
     for (let i = 0; i < 20; i++) {
         var a = Math.floor(Math.random() * 100 + 1);
@@ -165,4 +164,16 @@ $(".Top").click(function() {
 })
 $("#floorNav li").hover(function() {
     $(this).toggleClass("hover")
+})
+$(".btn").click(function() {
+    var shuju = $(".search_ct input").val()
+    axios.get(`http://localhost:3000/productlist`, {
+        params: {
+            title: shuju
+        }
+    }).then(arr => {
+        console.log(arr);
+        console.log();
+        window.location.href = `shangpinxiangqing.html?id=${arr.data[0].id}`;
+    })
 })

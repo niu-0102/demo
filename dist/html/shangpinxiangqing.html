@@ -6,177 +6,280 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../js/jquery-1.11.0.js"></script>
+    <link rel="stylesheet" href="../css/shangpin.css">
     <title>Document</title>
     <style>
-        #detail {
-            width: 400px;
-            height: 400px;
-        }
-        
         img {
-            width: 100%;
-            height: 100%;
+            width: 450px;
         }
     </style>
 </head>
 
 <body>
-    <em class="cun"></em>
+    <div class="head_bar">
+        <header id="head">
+            <ul class="head_ul_hd">
+                <li class="head_ul_li">
+                    <div class="head_ul_li_hd">
+                        <span>中国大陆</span>
+                        <span>v</span>
+                    </div>
+                </li>
+                <li class="head_ul_li">
+                    <div class="head_ul_li_hd login">
+                        <a href="login.html" class="h">亲，请登录</a>
+                    </div>
+                    <div class="head_ul_li_hd zhu">
+                        <a href="register.html">免费注册</a>
+                    </div>
+                </li>
+                <li class="head_ul_li">
+                    <div class="head_ul_li_hd">
+                        <a href="">手机逛淘宝</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="head_ul_bd">
+                <li class="head_ul_li xl">
+                    <div class="head_ul_li_hd">
+                        <span>
+                        <a href="">我的淘宝</a>
+                    </span>
+                        <span>
+                        v
+                    </span>
+                    </div>
+                    <div class="rel">
+                        <div class="head_ul_li_bd cf">
+                            <a href="">已买到的宝贝</a>
+                            <a href="">我的足迹</a>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="head_ul_li">
+                    <div class="head_ul_li_hd">
+                        <span>
+                        <a href="cart.html">购物车</a>
+                    </span>
+                        <span>
+                        v
+                    </span>
+                    </div>
+                </li>
+                <li class="head_ul_li xl">
+                    <div class="head_ul_li_hd">
+                        <span>
+                        <a href="">收藏夹</a>
+                    </span>
+                        <span>
+                        v
+                    </span>
+                    </div>
+                    <div class="rel">
+                        <div class="head_ul_li_bd cf">
+                            <a href="">收藏的宝贝</a>
+                            <a href="">收藏的店铺</a>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="head_ul_li">
+                    <div class="head_ul_li_hd">
+                        <span>
+                        <a href="">商品分类</a>
+                    </span>
+                    </div>
+                </li>
+                <li class="head_ul_li">
+                    <div class="head_ul_li_hd">
+                        <span>
+                        <a href="">免费开店</a>
+                    </span>
+                    </div>
+                </li>
+                <li class="head_ul_li">
+                    <div class="head_ul_li_hd">
+                        <span>
+                        |
+                    </span>
+                    </div>
+                </li>
+                <li class="head_ul_li xl">
+                    <div class="head_ul_li_hd">
+                        <span>
+                        <a href="">千牛卖家中心</a>
+                    </span>
+                        <span>v</span>
+                    </div>
+                    <div class="rel">
+                        <div class="head_ul_li_bd cf">
+                            <a href="">免费开店</a>
+                            <a href="">已卖出的宝贝</a>
+                            <a href="">出售中的宝贝</a>
+                            <a href="">卖家服务市场</a>
+                            <a href="">卖家培训中心</a>
+                            <a href="">体检中心</a>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="head_ul_li xl">
+                    <div class="head_ul_li_hd">
+                        <span>
+                        <a href="">联系客服</a>
+                    </span>
+                        <span>v</span>
+                    </div>
+                    <div class="rel">
+                        <div class="head_ul_li_bd cf">
+                            <a href="">消费者客服</a>
+                            <a href="">卖家客服</a>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="head_ul_li xl">
+                    <div class="head_ul_li_hd">
+                        <span>
+                        <a href="">网站导航</a>
+                    </span>
+                        <span>v</span>
+                    </div>
+                    <div class="rel">
+                        <div id="J_SiteMapBd" class="site-nav-menu-panel" style="width:1188px">
+                            <div class="site-nav-sitemap-mod" data-spm="754904949">
+                                <div class="site-nav-sitemap-mod-wrap">
+                                    <div class="site-nav-sitemap-mod-hd">
+                                        <h4 style="color:#fc4200">主题市场</h4>
+                                    </div>
+                                    <div class="site-nav-sitemap-mod-bd">
+                                        <ul>
+                                            <li style="width:24%"><a href="">女装<i class="hot"></i></a></li>
+                                            <li style="width:24%"><a href="">男装</a></li>
+                                            <li style="width:24%"><a href="">内衣</a></li>
+                                            <li style="width:24%"><a href="">鞋靴</a></li>
+                                            <li style="width:24%"><a href="">箱包</a></li>
+                                            <li style="width:24%"><a href="">婴童</a></li>
+                                            <li style="width:24%"><a href="">家电</a></li>
+                                            <li style="width:24%"><a href="">数码</a></li>
+                                            <li style="width:24%"><a href="">手机</a></li>
+                                            <li style="width:24%"><a href="">美妆</a></li>
+                                            <li style="width:24%"><a href="">珠宝</a></li>
+                                            <li style="width:24%"><a href="">眼镜</a></li>
+                                            <li style="width:24%"><a href="">手表</a></li>
+                                            <li style="width:24%"><a href="">运动</a></li>
+                                            <li style="width:24%"><a href="">户外</a></li>
+                                            <li style="width:24%"><a href="">乐器</a></li>
+                                            <li style="width:24%"><a href="">游戏</a></li>
+                                            <li style="width:24%"><a href="">动漫</a></li>
+                                            <li style="width:24%"><a href="">影视</a></li>
+                                            <li style="width:24%"><a href="">美食</a></li>
+                                            <li style="width:24%"><a href="">鲜花</a></li>
+                                            <li style="width:24%"><a href="">宠物</a></li>
+                                            <li style="width:24%"><a href="">农资</a></li>
+                                            <li style="width:24%"><a href="m">房产</a></li>
+                                            <li style="width:24%"><a href="">装修</a></li>
+                                            <li style="width:24%"><a href="">建材</a></li>
+                                            <li style="width:24%"><a href="">家居</a></li>
+                                            <li style="width:24%"><a href="">百货</a></li>
+                                            <li style="width:24%"><a href="">汽车</a></li>
+                                            <li style="width:24%"><a href="">二手车</a></li>
+                                            <li style="width:24%"><a href="">办公</a></li>
+                                            <li style="width:24%"><a href="">定制</a></li>
+                                            <li style="width:24%"><a href="">教育</a></li>
+                                            <li style="width:24%"><a href="">卡券</a></li>
+                                            <li style="width:24%"><a href="">本地</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="site-nav-sitemap-mod" data-spm="754904957">
+                                <div class="site-nav-sitemap-mod-wrap">
+                                    <div class="site-nav-sitemap-mod-hd">
+                                        <h4 style="color:#9fb838">特色市场</h4>
+                                    </div>
+                                    <div class="site-nav-sitemap-mod-bd">
+                                        <ul>
+                                            <li style="width:33%"><a href="">全球购</a></li>
+                                            <li style="width:33%"><a href="">极有家</a></li>
+                                            <li style="width:33%"><a href="">阿里拍卖</a></li>
+                                            <li style="width:33%"><a href="">淘宝众筹</a></li>
+                                            <li style="width:33%"><a href="">飞猪</a></li>
+                                            <li style="width:33%"><a href="">农资</a></li>
+                                            <li style="width:33%"><a href="">天天特卖</a></li>
+                                            <li style="width:33%"><a href="">Outlets</a></li>
+                                            <li style="width:33%"><a href="">淘抢购</a></li>
+                                            <li style="width:33%"><a href="">试用</a></li>
+                                            <li style="width:33%"><a href="">量贩团</a></li>
+                                            <li style="width:33%"><a href="">阿里翻译</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="site-nav-sitemap-mod" data-spm="754904961">
+                                <div class="site-nav-sitemap-mod-wrap">
+                                    <div class="site-nav-sitemap-mod-hd">
+                                        <h4 style="color:#d75696">阿里APP</h4>
+                                    </div>
+                                    <div class="site-nav-sitemap-mod-bd">
+                                        <ul>
+                                            <li style="width:33%"><a href="">淘宝</a></li>
+                                            <li style="width:33%"><a href="">天猫</a></li>
+                                            <li style="width:33%"><a href="">支付宝</a></li>
+                                            <li style="width:33%"><a href="">聚划算</a></li>
+                                            <li style="width:33%"><a href="">飞猪</a></li>
+                                            <li style="width:33%"><a href="">蚂蚁聚宝</a></li>
+                                            <li style="width:33%"><a href="">闲鱼</a></li>
+                                            <li style="width:33%"><a href="">淘小铺<i></i></a></li>
+                                            <li style="width:33%"><a href="">阿里钱盾</a></li>
+                                            <li style="width:33%"><a href="">钉钉</a></li>
+                                            <li style="width:33%"><a href="">高德地图</a></li>
+                                            <li style="width:33%"><a href="">虾米音乐</a></li>
+                                            <li style="width:33%"><a href="">淘票票</a></li>
+                                            <li style="width:33%"><a href="">菜鸟裹裹</a></li>
+                                            <li style="width:33%"><a href="">阿里云</a></li>
+                                            <li style="width:33%"><a href="">网商银行</a></li>
+                                            <li style="width:33%"><a href="">阿里邮箱</a></li>
+                                            <li style="width:33%"><a href="">阿里众包</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="site-nav-sitemap-mod" data-spm="754904965">
+                                <div class="site-nav-sitemap-mod-wrap">
+                                    <div class="site-nav-sitemap-mod-hd">
+                                        <h4 style="color:#2e9fdb">精彩推荐集</h4>
+                                    </div>
+                                    <div class="site-nav-sitemap-mod-bd">
+                                        <ul>
+                                            <li style="width:49%"><a href="">余额宝</a></li>
+                                            <li style="width:49%"><a href="">大牌捡宝</a></li>
+                                            <li style="width:49%"><a href="">淘公仔</a></li>
+                                            <li style="width:49%"><a href="">浏览器</a></li>
+                                            <li style="width:49%"><a href="">淘宝香港</a></li>
+                                            <li style="width:49%"><a href="">淘宝台湾</a></li>
+                                            <li style="width:49%"><a href="">淘宝全球</a></li>
+                                            <li style="width:49%"><a href="">淘宝东南亚</a></li>
+                                            <li style="width:49%"><a href="">闺蜜淘货</a></li>
+                                            <li style="width:49%"><a href="">大众评审</a></li>
+                                            <li style="width:49%"><a href="">淘工作</a></li>
+                                            <li style="width:49%"><a href="">阿里巴巴认证</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </header>
+    </div>
     <div id="detail">
 
     </div>
-    <script>
-        var user = JSON.parse(localStorage.getItem("username"));
-        let Id = location.search.split("=")[1];
-        $(".cun").html(Id)
-        var a = ""
-        axios.get("http://localhost:3000/protucts", {
-            params: {
-                id: Id
-            }
-        }).then(aaa => {
-            a = aaa.data.length
-            if (a != 0) {
-                axios.get("http://localhost:3000/protucts", {
-                    params: {
-                        id: Id
-                    }
-                }).then(aaa => {
-                    let oDetail = document.getElementById("detail");
-                    oDetail.innerHTML = `
-            <img src="${aaa.data[0].imgUrl}">
-            <p>${aaa.data[0].title}</p>
-            <p>${aaa.data[0].people}</p>
-            <span>-</span><input type="text" value="1"><span>+</span>
-            <input type="button" value="加入购物车" id="addBtn">
-        `;
-                    $("span").eq(0).click(function() {
-                        let num = $("input").eq(0).val();
-                        num--;
-                        if (num < 1) {
-                            num = 1;
-                        }
-                        $("input").eq(0).val(num);
-                    })
-                    $("span").eq(1).click(function() {
-                        let num = $("input").eq(0).val();
-                        num++;
-                        $("input").eq(0).val(num);
-                    })
-                    $("input").eq(0).change(function() {
-                        let num = $("input").eq(0).val();
-                        if (num < 1) {
-                            num = 1;
-                        }
-                        $("input").eq(0).val(num);
-                    })
-                    if (user) {
-                        $("#addBtn").click(function() {
-                            axios.get("http://localhost:3000/carts", {
-                                params: {
-                                    username: user,
-                                    id: Id
-                                }
-                            }).then(add => {
-                                if (add.data.length == 0) {
-                                    axios.post("http://localhost:3000/carts", {
-                                        username: user,
-                                        id: Id,
-                                        title: $("p:first").text(),
-                                        price: $("p:last").text(),
-                                        imgUrl: $("img").attr("src"),
-                                        shu: $(":text").val()
-                                    })
-                                } else {
-                                    axios.get("http://localhost:3000/carts", {
-                                        username: user,
-                                        id: Id
-                                    }).then(gai => {
-                                        let num = Math.floor(gai.data[0].shu);
-                                        num += Math.floor($(":text").val())
-                                        axios.patch(`http://localhost:3000/carts/${Id}`, {
-                                            shu: num
-                                        })
-                                    })
-
-                                }
-                            })
-                        })
-                    }
-                })
-            } else {
-                axios.get("http://localhost:3000/productlist", {
-                    params: {
-                        id: Id
-                    }
-                }).then(bbb => {
-                    let oDetail = document.getElementById("detail");
-                    oDetail.innerHTML = `
-            <img src="${bbb.data[0].imgUrl}">
-            <p>${bbb.data[0].title}</p>
-            <p>${bbb.data[0].price}</p>
-            <span>-</span><input type="text" value="1"><span>+</span>
-            <input type="button" value="加入购物车" id="addBtn">
-        `;
-                    $("span").eq(0).click(function() {
-                        let num = $("input").eq(0).val();
-                        num--;
-                        if (num < 1) {
-                            num = 1;
-                        }
-                        $("input").eq(0).val(num);
-                    })
-                    $("span").eq(1).click(function() {
-                        let num = $("input").eq(0).val();
-                        num++;
-                        $("input").eq(0).val(num);
-                    })
-                    $("input").eq(0).change(function() {
-                        let num = $("input").eq(0).val();
-                        if (num < 1) {
-                            num = 1;
-                        }
-                        $("input").eq(0).val(num);
-                    })
-                    if (user) {
-                        $("#addBtn").click(function() {
-                            axios.get("http://localhost:3000/carts", {
-                                params: {
-                                    username: user,
-                                    id: Id
-                                }
-                            }).then(add => {
-                                if (add.data.length == 0) {
-                                    axios.post("http://localhost:3000/carts", {
-                                        username: user,
-                                        id: Id,
-                                        title: $("p:first").text(),
-                                        price: $("p:last").text(),
-                                        imgUrl: $("img").attr("src"),
-                                        shu: $(":text").val()
-                                    })
-                                } else {
-                                    axios.get("http://localhost:3000/carts", {
-                                        params: {
-                                            username: user,
-                                            id: Id
-                                        }
-                                    }).then(gai => {
-                                        let num = Math.floor(gai.data[0].shu);
-                                        num += Math.floor($(":text").val())
-                                        axios.patch(`http://localhost:3000/carts/${Id}`, {
-                                            shu: num
-                                        })
-                                    })
-
-                                }
-                            })
-                        })
-                    }
-                })
-            }
-        })
-    </script>
+    <script src="../js/shangpin.js"></script>
 
 </body>
 
